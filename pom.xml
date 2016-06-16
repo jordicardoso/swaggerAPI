@@ -26,9 +26,9 @@
     <version>2.16.2</version>
   </parent>
 
-  <artifactId>bonpreu-api</artifactId>
-  <name>BonPreu :: Api :: Swagger</name>
-  <description>API Bonpreu amb Swagger Framework</description>
+  <artifactId>test-api</artifactId>
+  <name>Holonomics :: Api :: Swagger</name>
+  <description>API amb Swagger Framework</description>
   <packaging>war</packaging>
 
   <properties>

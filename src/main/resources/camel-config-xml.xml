@@ -38,7 +38,7 @@
     <!-- also enable swagger api, using the apiContextPath
          and enable CORS so the swagger-ui web console can access the swagger api docs -->
     <restConfiguration component="servlet" bindingMode="json"
-                       contextPath="bonpreu-api/rest" port="8182"
+                       contextPath="test-api/rest" port="8182"
                        apiContextPath="api-docs" apiContextListing="true"
                        enableCORS="true">
 
@@ -59,7 +59,7 @@
       <description>User rest service</description>
 
       <!-- this is a rest GET to view an user by the given id -->
-      <get uri="/{id}" outType="com.bonpreu.api.User">
+      <get uri="/{id}" outType="com.test.api.User">
         <description>Find user by id</description>
         <param name="id" type="path" description="The id of the user to get" dataType="integer"/>
         <responseMessage message="The user that was found"/>
@@ -76,14 +76,14 @@
       </get>
 
       <!-- this is a rest PUT to create/update an user -->
-      <put type="com.bonpreu.api.User">
+      <put type="com.test.api.User">
         <description>Updates or create a user</description>
         <param name="body" type="body" description="The user to update or create"/>
         <to uri="bean:userService?method=updateUser"/>
       </put>
 
       <!-- this is a rest GET to find all users -->
-      <get uri="/findAll" outType="com.bonpreu.api.User[]">
+      <get uri="/findAll" outType="com.test.api.User[]">
         <description>Find all users</description>
         <responseMessage message="All the users"/>
         <to uri="bean:userService?method=listUsers"/>
