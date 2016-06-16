@@ -7,17 +7,8 @@
     <!-- a bean for user services -->
     <bean id="userService" class="com.test.api.UserService"/>
 
-    <camelContext id="myAPI" xmlns="http://camel.apache.org/schema/blueprint">
+    <camelContext id="myCamel" xmlns="http://camel.apache.org/schema/blueprint">
 
-        <!-- configure rest to use the camel-servlet component, and use json binding mode -->
-        <!-- and tell to output json in pretty print mode -->
-        <!-- setup context path and port number that Apache Tomcat will deploy this application with,
-             as we use the servlet component, then we need to aid Camel to tell it these details so Camel
-             knows the url to the REST services.
-             Notice: This is optional, but needed if the RestRegistry should enlist accurate information.
-             You can access the RestRegistry from JMX at runtime -->
-        <!-- also enable swagger api, using the apiContextPath
-             and enable CORS so the swagger-ui web console can access the swagger api docs -->
         <restConfiguration component="jetty" bindingMode="json"
                            contextPath="swagger-osgi/rest" port="8080"
                            apiContextPath="api-docs" apiContextListing="true"
