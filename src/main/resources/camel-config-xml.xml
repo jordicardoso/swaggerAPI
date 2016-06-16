@@ -24,9 +24,9 @@
          http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
 
   <!-- a bean for user services -->
-  <bean id="userService" class="com.bonpreu.api.UserService"/>
+  <bean id="userService" class="com.test.api.UserService"/>
 
-  <camelContext id="BonpreuAPI" xmlns="http://camel.apache.org/schema/spring">
+  <camelContext id="testAPI" xmlns="http://camel.apache.org/schema/spring">
 
     <!-- configure rest to use the camel-servlet component, and use json binding mode -->
     <!-- and tell to output json in pretty print mode -->
